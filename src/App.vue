@@ -346,15 +346,9 @@
 </template>
 
 <script>
-import ElRow from '@ele/ElRow';
-import ElCol from '@ele/ElCol';
-
 export default {
   name: 'App',
-  components: {
-    ElRow,
-    ElCol
-  }
+  components: {}
 };
 </script>
 
