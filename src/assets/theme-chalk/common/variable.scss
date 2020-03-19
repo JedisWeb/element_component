@@ -1,0 +1,36 @@
+$--sm: 768px;
+$--md: 992px;
+$--lg: 1200px;
+$--xl: 1920px;
+
+$--breakpoints: (
+	'xs': (
+		max-width: $--sm - 1
+	),
+	'sm': (
+		min-width: $--sm
+	),
+	'md': (
+		min-width: $--md
+	),
+	'lg': (
+		min-width: $--lg
+	),
+	'xl': (
+		min-width: $--xl
+	)
+);
+
+$--breakpoints-spec: (
+	'xs-only': '(max-width: #{$--sm - 1})',
+	'sm-only': '(min-width: #{$--sm}) and (max-width: #{$--md - 1})',
+	'sm-and-down': '(max-width: #{$--sm})',
+	'sm-and-up': '(min-width: #{$--sm})',
+	'md-only': '(min-width: #{$--md - 1}) and (max-width: #{$--lg - 1})',
+	'md-and-down': '(max-width: #{$--md})',
+	'md-and-up': '(min-width: #{$--md})',
+	'lg-only': '(min-width: #{$--lg}) and (max-width: #{$--xl - 1})',
+	'lg-and-down': '(max-width: #{$--lg})',
+	'lg-and-up': '(min-width: #{$--lg})',
+	'xl-only': '(min-width: #{$--xl})'
+);

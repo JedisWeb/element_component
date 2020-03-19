@@ -348,11 +348,11 @@
 <script>
 export default {
   name: 'App',
-  components: {},
+  components: {}
 };
 </script>
 
-<style lang="less">
+<style lang="scss">
 .el-row {
   margin-bottom: 20px;
   &:last-child {
