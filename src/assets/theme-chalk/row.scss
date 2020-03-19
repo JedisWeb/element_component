@@ -1,40 +1,35 @@
-.el-row {
+@import './mixins/mixin';
+@import './mixins/util';
 
-    &::before,
-    &::after {
-        content: '';
-        display: block;
-    }
+@include b(row) {
 
-    &::after {
-        clear: both;
-    }
+    @include utils-clearfix;
 
-    &--flex {
+    @include m(flex) {
         display: flex;
-    }
 
-    &.is-justify-center {
-        justify-content: center;
-    }
+        @include when(justify-center) {
+            justify-content: center;
+        }
 
-    &.is-justify-end {
-        justify-content: flex-end;
-    }
+        @include when(justify-end) {
+            justify-content: flex-end;
+        }
 
-    &.is-justify-space-between {
-        justify-content: space-between;
-    }
+        @include when(justify-space-between) {
+            justify-content: space-between;
+        }
 
-    &.is-justify-space-around {
-        justify-content: space-around;
-    }
+        @include when(justify-space-around) {
+            justify-content: space-around;
+        }
 
-    &.is-align-middle {
-        align-items: center;
-    }
+        @include when(align-middle) {
+            align-items: center;
+        }
 
-    &.is-align-bottom {
-        align-items: flex-end;
+        @include when(align-bottom) {
+            align-items: flex-end;
+        }
     }
 }

@@ -1,0 +1,17 @@
+// 工具混合器
+@mixin utils-clearfix {
+    $selector: &;
+
+    @at-root {
+
+        #{$selector}::before,
+        #{$selector}::after {
+            content: '';
+            display: block;
+        }
+
+        #{$selector}::after {
+            clear: both;
+        }
+    }
+}

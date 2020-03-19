@@ -1,46 +1,46 @@
 export default {
-  name: "ElRow",
+  name: 'ElRow',
   props: {
     tag: {
       type: String,
-      default: "div"
+      default: 'div',
     },
     gutter: Number,
     type: String,
     justify: {
       type: String,
-      default: "start",
-      validator: val => ["start", "end", "center", "space-between", "space-around"].includes(val)
+      default: 'start',
+      validator: (val) => ['start', 'end', 'center', 'space-between', 'space-around'].includes(val),
     },
     align: {
       type: String,
-      default: "top",
-      validator: val => ["top", "middle", "bottom"].includes(val)
-    }
+      default: 'top',
+      validator: (val) => ['top', 'middle', 'bottom'].includes(val),
+    },
   },
   computed: {
     style() {
+      const style = {};
       if (this.gutter) {
-        let style = {};
         style.marginLeft = `${-this.gutter / 2}px`;
         style.marginRight = style.marginLeft;
-        return style;
       }
-    }
+      return style;
+    },
   },
-  render: function(h) {
+  render(h) {
     return h(
       this.tag,
       {
         class: [
-          "el-row",
-          { "el-row--flex": this.type === "flex" },
-          this.justify !== "start" && `is-justify-${this.justify}`,
-          this.align !== "top" && `is-align-${this.align}`
+          'el-row',
+          { 'el-row--flex': this.type === 'flex' },
+          this.justify !== 'start' && `is-justify-${this.justify}`,
+          this.align !== 'top' && `is-align-${this.align}`,
         ],
-        style: this.style
+        style: this.style,
       },
-      this.$slots.default
+      this.$slots.default,
     );
-  }
+  },
 };

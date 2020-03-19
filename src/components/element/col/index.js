@@ -1,6 +1,6 @@
-import Col from "./src/col";
+import Col from './src/col';
 
-Col.install = Vue => {
+Col.install = (Vue) => {
   Vue.component(Col.name, Col);
 };
 

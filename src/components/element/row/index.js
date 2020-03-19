@@ -1,6 +1,6 @@
-import Row from "./src/row";
+import Row from './src/row';
 
-Row.install = Vue => {
+Row.install = (Vue) => {
   Vue.component(Row.name, Row);
 };
 

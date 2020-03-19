@@ -1,0 +1,41 @@
+@import './config';
+
+/**
+    BEM命名规范
+*/
+@mixin b($block) {
+    $B: $namespace + $block-separator + $block;
+
+    @at-root {
+        .#{$B} {
+            @content;
+        }
+    }
+}
+
+@mixin m($modifier) {
+    $selector: &;
+    $currentSelector: '';
+
+    // 解决群组选择器
+    @each $item in $modifier {
+        $currentSelector: $currentSelector + $selector + $modifier-separator + $item + ',';
+    }
+
+    @at-root {
+        #{$currentSelector} {
+            @content;
+        }
+    }
+}
+
+@mixin when($state) {
+    $selector: &;
+    $currentState: $selector + '.'+ $state-prefix + $state;
+
+    @at-root {
+        #{$currentState} {
+            @content;
+        }
+    }
+}
