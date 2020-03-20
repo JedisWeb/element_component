@@ -1,0 +1,8 @@
+@import './mixins/mixin';
+@import './common/variable.scss';
+
+@include b(header) {
+	display: flex;
+	box-sizing: border-box;
+	padding: $--header-padding;
+}

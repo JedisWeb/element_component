@@ -1,0 +1,5 @@
+@import './mixins/mixin';
+
+@include b(aside) {
+	box-sizing: border-box;
+}
