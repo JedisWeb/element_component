@@ -1,11 +1,56 @@
+/* 内边距
+----------------------*/
 $--header-padding: 0 20px !default;
 $--main-padding: 20px !default;
 $--footer-padding: 0 20px !default;
 
+/* 屏幕断点
+-----------------------*/
 $--sm: 768px !default;
 $--md: 992px !default;
 $--lg: 1200px !default;
 $--xl: 1920px !default;
+
+/* 主色
+-----------------------*/
+$--color-white: #ffffff !default;
+$--color-black: #000000 !default;
+$--color-primary: #409eff !default;
+$--color-primary-light-1: mix($--color-white, $--color-primary, 10%) !default;
+$--color-primary-lignt-2: mix($--color-white, $--color-primary, 20%) !default;
+$--color-primary-light-8: mix($--color-white, $--color-primary, 30%) !default;
+$--color-primary-light-4: mix($--color-white, $--color-primary, 40%) !default;
+$--color-primary-light-5: mix($--color-white, $--color-primary, 50%) !default;
+$--color-primary-light-6: mix($--color-white, $--color-primary, 60%) !default;
+$--color-primary-light-7: mix($--color-white, $--color-primary, 70%) !default;
+$--color-primary-light-8: mix($--color-white, $--color-primary, 80%) !default;
+$--color-primary-light-9: mix($--color-white, $--color-primary, 90%) !default;
+
+/* 辅助色
+---------------------------*/
+$--color-success: #67c23a !default; // 成功颜色
+$--color-success-light: mix($--color-white, $--color-success, 80%) !default;
+$--color-success-lighter: mix($--color-white, $--color-success, 90%) !default;
+$--color-warning: #e6a23c !default; // 警告颜色
+$--color-warning-light: mix($--color-white, $--color-warning, 80%) !default;
+$--color-warning-lighter: mix($--color-white, $--color-warning, 90%) !default;
+$--color-danger: #f56c6c !default;
+$--color-danger-light: mix($--color-white, $--color-danger, 80%) !default;
+$--color-danger-lighter: mix($--color-white, $--color-danger, 90%) !default;
+$--color-info: #909399 !default;
+$--color-info-light: mix($--color-white, $--color-info, 80%) !default;
+$--color-info-lighter: mix($--color-white, $--color-info, 90%) !default;
+
+/* 中性色
+--------------------------*/
+$--color-text-primary: #303133 !default; // 主要文字
+$--color-text-regular: #606266 !default; // 常规文字
+$--color-test-secondary: #909399 !default; // 次要文字
+$--color-text-placeholder: #c0c4cc !default; // 占位文字
+$--border-base: #dcdfe6 !default;
+$--border-light: #e4e7ed !default;
+$--border-lighter: #ebeef5 !default;
+$--border-color-extrc-light: #f2f6fc !default;
 
 $--breakpoints: (
 	'xs': (
