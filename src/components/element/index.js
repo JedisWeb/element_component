@@ -5,8 +5,9 @@ import Aside from "./aside";
 import Main from "./main";
 import Header from "./header";
 import Footer from "./footer";
+import Icon from "./icon";
 
-const components = [Row, Col, Container, Aside, Main, Header, Footer];
+const components = [Row, Col, Container, Aside, Main, Header, Footer, Icon];
 
 const install = Vue => {
   components.forEach(com => {
@@ -14,7 +15,7 @@ const install = Vue => {
   });
 };
 
-export { Row, Col, Container, Aside, Main, Header, Footer };
+export { Row, Col, Container, Aside, Main, Header, Footer, Icon };
 
 // 全部导入
 export default {
@@ -25,5 +26,6 @@ export default {
   Aside,
   Main,
   Header,
-  Footer
+  Footer,
+  Icon
 };
